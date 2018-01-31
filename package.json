@@ -4,7 +4,7 @@
   "description": "Discord bot for Fornite Costa Rica - Official. It register and show Fortnite ID for Discord users.",
   "main": "fcr.js",
   "engines": {
-    "node": "6.10.02",
+    "node": "6.10",
     "npm": "3.10.10"
   },
   "scripts": {
