@@ -1,0 +1,32 @@
+{
+  "name": "fortniteCR",
+  "version": "1.0.0",
+  "description": "Discord bot for Fornite Costa Rica - Official. It register and show Fortnite ID for Discord users.",
+  "main": "fcr.js",
+  "engines": {
+    "node": "6.10.02",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node fcr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikessc/fcr_bot"
+  },
+  "keywords": [
+    "fornite costa rica",
+    "fcr.js"
+  ],
+  "author": "A.I.R.E.L",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikessc/fcr_bot/issues"
+  },
+  "homepage": "https://github.com/mikessc/fcr_bot#readme",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^2.4.0"
+  }
+}
