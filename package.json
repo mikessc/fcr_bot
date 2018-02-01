@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/mikessc/fcr_bot#readme",
   "dependencies": {
-    "discord.io": "^2.5.3",
     "discord.js": "^11.3.0",
-    "winston": "^2.4.0"
+    "enmap": "^0.4.2",
+    "enmap-level": "^1.0.0",
+    "fs": "0.0.1-security"
   },
   "devDependencies": {}
 }

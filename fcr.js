@@ -1,32 +1,35 @@
 const Discord = require("discord.js");
-const fcr = new Discord.Client();
+const client = new Discord.Client();
+const config = require("./config.json");
+const fs = require("fs");
 
-fcr.on("ready", () => {
-  console.log("I am ready!");
+client.db = JSON.parse(fs.readFileSync("./db/data.json", "utf8"));
+
+client.on("ready", () => {
+  console.log("Running Fortnite Costa Rica Bot");
 });
 
-fcr.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.content.startsWith(".fcr")) {
-        message.channel.send("bot command!");
-    }
-    if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-        args = args.splice(1);
-        switch(cmd) {
-            // !ping
-            case 'ping':
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Pong!'
-                });
-            break;
-            // Just add any case commands if you want to..
-         }
-     }
+client.on("message", (message ) => {
+
+  // Exit and stop if prefix it's not there
+  if ((!message.content.startsWith(config.prefix) && !message.content.startsWith("!")) || message.author.bot) return;
+
+  var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  var command = args.shift().toLowerCase();
+
+  if (message.content.startsWith("!")) {
+    args = message.content.slice(1).trim().split(/ +/g);
+    command = args.shift().toLowerCase();
+  }
+
+  try {
+    let commandFile = require(`./commands/${command}.js`);
+    commandFile.run(client, config, message, args);
+  } catch (err) {
+    message.channel.send("Command error!");
+    console.error(err);
+  }
+
 });
 
-fcr.login("NDA4MjkwNDM3NzUzOTk1Mjc1.DVN8uQ.-ZimvU5rDnuVewf3RsOV149VZM8");
+client.login(config.token);
