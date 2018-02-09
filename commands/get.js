@@ -1,15 +1,38 @@
-const fs = require("fs");
+exports.run = (params) => {
 
-exports.run = (client, config, message, args) => {
-  var fortID = args[0];
+  if (!params.message.content.startsWith(params.config.prefix)) return;
 
-  if (!message.content.startsWith(config.prefix)) return;
+  params.MongoClient.connect(params.access.dbURL, function(err, db) {
+    if (err) {
+      throw err;
+      params.client.onDataBaseError(params.message.channel);
+    } else {
+      var dbo = db.db("fcr"),
+          search = { discordID: params.message.mentions.members.first().id };
 
-  client.db = JSON.parse(fs.readFileSync("./db/data.json", "utf8"));
-
-  if (client.db[message.mentions.members.first().id]) {
-    message.channel.send("El Fortnite ID de <@" + message.mentions.members.first().id + "> es: " + client.db[message.mentions.members.first().id]);
-  } else {
-    message.channel.send("No se ha registrado ID para el usuario <@" + message.mentions.members.first().id + ">");
-  }
+      //busca el usuario para ver si esta registrado
+      dbo.collection("users").find(search).toArray(function(err, result) {
+        if (err) {
+          params.client.onDataBaseError(params.message.channel);
+        } else {
+          if (result.length == 1) { //si encuentra el usuario
+            params.message.channel.send({
+              embed: {
+                color: params.config.colors.blue,
+                description: "El Fortnite ID de <@" + search.discordID + "> es: **" + result[0].fortniteID + "**"
+              }
+            });
+          } else { //usuario no ha sido encontrado
+            params.message.channel.send({
+              embed: {
+                color: params.config.colors.red,
+                description: "⛔ No se ha registrado ID para el usuario <@" + search.discordID + ">"
+              }
+            });
+          }
+        }
+        db.close();
+      });
+    }
+  });
 }

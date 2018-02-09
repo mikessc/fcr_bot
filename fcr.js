@@ -1,12 +1,18 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const access = require("./access.json");
 const config = require("./config.json");
 const fs = require("fs");
 
-client.db = JSON.parse(fs.readFileSync("./db/data.json", "utf8"));
+const MongoClient = require('mongodb').MongoClient;
+const client = new Discord.Client();
 
-client.on("ready", () => {
+// Vars
+client.commandsList = fs.readdirSync('./commands/');
+
+// Events
+client.on("ready", () => {  
   console.log("Running Fortnite Costa Rica Bot");
+  client.user.setActivity('.fcr help');
 });
 
 client.on("message", (message ) => {
@@ -24,12 +30,28 @@ client.on("message", (message ) => {
 
   try {
     let commandFile = require(`./commands/${command}.js`);
-    commandFile.run(client, config, message, args);
+    commandFile.run({client, config, access, message, args, MongoClient});
   } catch (err) {
-    message.channel.send("Command error!");
+    message.channel.send({
+      embed: {
+        color: config.colors.red,
+        description: "⛔ Error en el comando. Escribe **.fcr help** para obtener ayuda."
+      }
+    });
     console.error(err);
   }
 
 });
 
-client.login(config.token);
+client.login(access.token);
+
+// Functions
+client.onDataBaseError = function (channel) {
+  var dbErrorMsg = {
+    embed: {
+      color: params.config.colors.red,
+      description: "⛔ Error en conexión a base de datos."
+    }
+  };
+  channel.send(dbErrorMsg);
+};

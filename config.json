@@ -1,4 +1,10 @@
 {
-   "token" : "NDA4MjkwNDM3NzUzOTk1Mjc1.DVN8uQ.-ZimvU5rDnuVewf3RsOV149VZM8",
-   "prefix" : ".fcr"
+  "prefix" : ".fcr",
+  "colors": {
+    "yellow" : 16312092,
+    "purple" : 7878884,
+    "green" : 8311585,
+    "blue" : 4886754,
+    "red" : 15472433
+  }
 }
