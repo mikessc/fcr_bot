@@ -1,7 +1,5 @@
 exports.run = (params) => {
   var uberIcon = "https://cdn.geekwire.com/wp-content/uploads/2016/02/uberriderlogo-e1454443856991-300x300.png";
-
-  if (!params.message.content.startsWith("!")) return;
   
   if (params.args[0]) {
     params.message.channel.send({embed: {

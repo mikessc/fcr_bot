@@ -1,6 +1,4 @@
-exports.run = (params) => {
-  if (!params.message.content.startsWith("!")) return;
-  
+exports.run = (params) => {  
   if (params.args[0]) {
     params.message.channel.send(params.message.mentions.members.first() + " necesitamos un 4x4 para <@" + params.message.author.id +">");
   } else {

@@ -1,7 +1,6 @@
 exports.run = (params) => {
-  if (!params.message.content.startsWith(params.config.prefix)) return;
-
   var commands = {}; // initiate value for the command list of client
+  
   for (i = 0; i < params.client.commandsList.length; i++) {
     let item = params.client.commandsList[i];
     if (item.match(/\.js$/)) { // only take js files

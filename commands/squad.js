@@ -2,8 +2,6 @@ exports.run = (params) => {
   var currentVoiceChannelID = params.message.member.voiceChannelID,
       currentInviteUrl;
 
-  if (!params.message.content.startsWith("!")) return;
-
   try {
     params.message.guild.channels.get(currentVoiceChannelID).createInvite().then(invite => {
       if (params.args[0]) {

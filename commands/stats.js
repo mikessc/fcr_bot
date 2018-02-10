@@ -3,8 +3,6 @@ var axios = require('axios');
 exports.run = (params) => {
   var fortID = params.args.join(" ");
 
-  if (!params.message.content.startsWith("!")) return;
-
   axios.get('https://fortnite.y3n.co/v2/player/' + fortID, {
     headers: { 'X-Key' : 'T2CPwtTcYdkowM8Nyxb4' }
   })

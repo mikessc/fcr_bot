@@ -1,7 +1,4 @@
 exports.run = (params) => {
-
-  if (!params.message.content.startsWith(params.config.prefix)) return;
-
   params.MongoClient.connect(params.access.dbURL, function(err, db) {
     if (err) {
       throw err;

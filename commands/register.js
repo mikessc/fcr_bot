@@ -1,8 +1,6 @@
 exports.run = (params) => {
   var fortID = params.args.join(" ");
 
-  if (!params.message.content.startsWith(params.config.prefix)) return;
-
   params.MongoClient.connect(params.access.dbURL, function(err, db) {
     if (err) {
       throw err;

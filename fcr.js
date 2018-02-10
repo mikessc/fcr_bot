@@ -18,7 +18,7 @@ client.on("ready", () => {
 client.on("message", (message ) => {
 
   // Exit and stop if prefix it's not there
-  if ((!message.content.startsWith(config.prefix) && !message.content.startsWith("!")) || message.author.bot) return;
+  if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
   var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   var command = args.shift().toLowerCase();
