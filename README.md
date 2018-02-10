@@ -14,15 +14,14 @@ Y listo! ya puedes comenzar a usarlo.
 
 Estos son los comandos disponibles:
 
-```
-**[.help](#help)**
-**[.register <Fortnite ID>](#register)**
-**[.get @<Discord user>](#get)**
-**[.reset <new Fortnite ID>](#reset)**
-**[.squad (@<Discord user>)](#squad)**
-**[.uber (@<Discord user>)](#uber)**
-**[.stats <Fortnite ID>](#stats)**
-```
+- **[.help](#help)**
+- **[.register <Fortnite ID>](#register)**
+- **[.get @<Discord user>](#get)**
+- **[.reset <new Fortnite ID>](#reset)**
+- **[.squad (@<Discord user>)](#squad)**
+- **[.uber (@<Discord user>)](#uber)**
+- **[.stats <Fortnite ID>](#stats)**
+
 
 <a name="help" />
 ### .help

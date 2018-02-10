@@ -1,14 +1,7 @@
 exports.run = (params) => {
   var commands = {}; // initiate value for the command list of client
   
-  for (i = 0; i < params.client.commandsList.length; i++) {
-    let item = params.client.commandsList[i];
-    if (item.match(/\.js$/)) { // only take js files
-      delete require.cache[require.resolve(`./commands/${item}.js`)]; // delete the cache of the require, useful in case you wanna reload the command again
-      commands[item.slice(0, -3)] = require(`./commands/${item}.js`); // and put the require inside the params.client.commands object
-    }
-  }
-  consle.dir(commands);
+  
 
   params.message.author.send({
     embed: {

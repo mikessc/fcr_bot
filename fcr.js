@@ -12,7 +12,7 @@ client.commandsList = fs.readdirSync('./commands/');
 // Events
 client.on("ready", () => {  
   console.log("Running Fortnite Costa Rica Bot");
-  client.user.setActivity('.fcr help');
+  client.user.setActivity('+help');
 });
 
 client.on("message", (message ) => {
@@ -23,7 +23,7 @@ client.on("message", (message ) => {
   var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   var command = args.shift().toLowerCase();
 
-  if (message.content.startsWith("!")) {
+  if (message.content.startsWith("+")) {
     args = message.content.slice(1).trim().split(/ +/g);
     command = args.shift().toLowerCase();
   }
