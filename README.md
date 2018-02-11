@@ -24,12 +24,12 @@ Estos son los comandos disponibles:
 
 
 <a name="help" />
-### \.help
+### help
 
 Envia por mensaje privado una lista rapida de los comandos disponibles.
 
 <a name="register" />
-### \.register <Fortnite ID>
+### register <Fortnite ID>
 
 Registra un ID de Fortnite&reg; al usuario de Discord&reg;. Asegurarse de que el ID este escrito correctamente, ya que es el que los demas van a agregar.
 
@@ -39,7 +39,7 @@ Ejemplo:
 ```
 
 <a name="get" />
-### \.get @<Discord user>
+### get @<Discord user>
 
 Muestra el ID de Fortnite&reg; registrado para cierto usuario de Discord&reg; mencionado.
 
@@ -49,7 +49,7 @@ Ejemplo:
 ```
 
 <a name="reset" />
-### \.reset <new Fortnite ID>
+### reset <new Fortnite ID>
 
 Reemplaza un ID de Fortnite&reg; para el usuario de Discord&reg;, en caso de que se haya escrito mal o se cambie el ID en el juego.
 
@@ -59,7 +59,7 @@ Ejemplo:
 ```
 
 <a name="squad" />
-### \.squad (opcional @<Discord user>)
+### squad (opcional @<Discord user>)
 
 Si se usa solo, muestra un mensaje general pidiendo personas que se unan al canal de voz para formar squad.
 Si se menciona un usuario de Discord&reg;, se envia un mensaje solicitando a este usuario para que se una al canal de voz para integrar el squad.
@@ -85,7 +85,7 @@ Ejemplo:
 ```
 
 <a name="stats" />
-### \.stats (opcional: ps|xb) <Fortnite ID>
+### stats (opcional: ps|xb) <Fortnite ID>
 
 Muestra estadisticas generales del usuario de Fortnite&reg;.
 Opcional escribe **ps** para usuarios de play station o **xb** para usuarios que son de xbox. 
