@@ -73,7 +73,7 @@ Ejemplo:
 ```
 
 <a name="uber" />
-### uber (opcional @<Discord user>)
+### uber 
 
 Si se usa solo, muestra un mensaje general ofreciendo carreo.
 Si se menciona un usuario de Discord&reg;, se envia un mensaje solicitando carreo a dicho usuario.
