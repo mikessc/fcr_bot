@@ -14,52 +14,57 @@ Y listo! ya puedes comenzar a usarlo.
 
 Estos son los comandos disponibles:
 
-- **[.help](#help)**
-- **[.register <Fortnite ID>](#register)**
-- **[.get](#get)**
-- **[.reset](#reset)**
-- **[.squad](#squad)**
-- **[.uber](#uber)**
-- **[.stat](#stats)**
+- **[+help](#help)**
+- **[+register <Fortnite ID>](#register)**
+- **[+get](#get)**
+- **[+reset](#reset)**
+- **[+squad](#squad)**
+- **[+uber](#uber)**
+- **[+stat](#stats)**
 
 
 <a name="help"></a>
-### help
+### +help
 
 Envia por mensaje privado una lista rapida de los comandos disponibles.
 
+Ejemplo:
+```
++help
+```
+
 <a name="register"></a>
-### register <Fortnite ID>
+### +register <Fortnite ID>
 
 Registra un ID de Fortnite&reg; al usuario de Discord&reg;. Asegurarse de que el ID este escrito correctamente, ya que es el que los demas van a agregar.
 
 Ejemplo:
 ```
-.register A.I.R.E.L
++register A.I.R.E.L
 ```
 
 <a name="get"></a>
-### get @<Discord user>
+### +get @<Discord user>
 
 Muestra el ID de Fortnite&reg; registrado para cierto usuario de Discord&reg; mencionado.
 
 Ejemplo:
 ```
-.get @☢ A.I.R.E.L#1324 
++get @☢ A.I.R.E.L#1324 
 ```
 
 <a name="reset"></a>
-### reset <new Fortnite ID>
+### +reset <new Fortnite ID>
 
 Reemplaza un ID de Fortnite&reg; para el usuario de Discord&reg;, en caso de que se haya escrito mal o se cambie el ID en el juego.
 
 Ejemplo:
 ```
-.reset newCoolID
++reset newCoolID
 ```
 
 <a name="squad"></a>
-### squad (opcional @<Discord user>)
+### +squad (opcional @<Discord user>)
 
 Si se usa solo, muestra un mensaje general pidiendo personas que se unan al canal de voz para formar squad.
 Si se menciona un usuario de Discord&reg;, se envia un mensaje solicitando a este usuario para que se una al canal de voz para integrar el squad.
@@ -68,31 +73,31 @@ Si se menciona un usuario de Discord&reg;, se envia un mensaje solicitando a est
 
 Ejemplo:
 ```
-.squad
-.squad @☢ A.I.R.E.L#1324 
++squad
++squad @☢ A.I.R.E.L#1324 
 ```
 
 <a name="uber"></a>
-### uber 
+### +uber 
 
 Si se usa solo, muestra un mensaje general ofreciendo carreo.
 Si se menciona un usuario de Discord&reg;, se envia un mensaje solicitando carreo a dicho usuario.
 
 Ejemplo:
 ```
-.uber
-.uber @☢ A.I.R.E.L#1324 
++uber
++uber @☢ A.I.R.E.L#1324 
 ```
 
 <a name="stats"></a>
-### stats (opcional: ps|xb) <Fortnite ID>
+### +stats (opcional: ps|xb) <Fortnite ID>
 
 Muestra estadisticas generales del usuario de Fortnite&reg;.
 Opcional escribe **ps** para usuarios de play station o **xb** para usuarios que son de xbox. 
 
 Ejemplo:
 ```
-.uber A.I.R.E.L
++uber A.I.R.E.L
 ```
 
 ## Bot hecho con
