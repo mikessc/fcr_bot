@@ -14,13 +14,7 @@ Y listo! ya puedes comenzar a usarlo.
 
 Estos son los comandos disponibles:
 
-- [.help](#help)
-- [.register <Fortnite ID>](#register)
-- [.get](#get)
-- [.reset](#reset)
-- [.squad](#squad)
-- [.uber](#uber)
-- [.stat](#stats)
+
 
 <a name="help" />
 ### Help
