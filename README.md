@@ -24,7 +24,7 @@ Estos son los comandos disponibles:
 
 
 <a name="help" />
-### help
+### Help
 
 Envia por mensaje privado una lista rapida de los comandos disponibles.
 
