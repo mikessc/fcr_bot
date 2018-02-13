@@ -22,11 +22,12 @@ Estos son los comandos disponibles:
 - **[.uber](#uber)**
 - **[.stat](#stats)**
 
+<a name="help"></a>
 ### Help
 
 Envia por mensaje privado una lista rapida de los comandos disponibles.
 
-<a name="register" />
+<a name="register"></a>
 ### register <Fortnite ID>
 
 Registra un ID de Fortnite&reg; al usuario de Discord&reg;. Asegurarse de que el ID este escrito correctamente, ya que es el que los demas van a agregar.
@@ -36,7 +37,7 @@ Ejemplo:
 .register A.I.R.E.L
 ```
 
-<a name="get" />
+<a name="get"></a>
 ### get @<Discord user>
 
 Muestra el ID de Fortnite&reg; registrado para cierto usuario de Discord&reg; mencionado.
@@ -46,7 +47,7 @@ Ejemplo:
 .get @☢ A.I.R.E.L#1324 
 ```
 
-<a name="reset" />
+<a name="reset"></a>
 ### reset <new Fortnite ID>
 
 Reemplaza un ID de Fortnite&reg; para el usuario de Discord&reg;, en caso de que se haya escrito mal o se cambie el ID en el juego.
@@ -56,7 +57,7 @@ Ejemplo:
 .reset newCoolID
 ```
 
-<a name="squad" />
+<a name="squad"></a>
 ### squad (opcional @<Discord user>)
 
 Si se usa solo, muestra un mensaje general pidiendo personas que se unan al canal de voz para formar squad.
@@ -70,7 +71,7 @@ Ejemplo:
 .squad @☢ A.I.R.E.L#1324 
 ```
 
-<a name="uber" />
+<a name="uber"></a>
 ### uber 
 
 Si se usa solo, muestra un mensaje general ofreciendo carreo.
@@ -82,7 +83,7 @@ Ejemplo:
 .uber @☢ A.I.R.E.L#1324 
 ```
 
-<a name="stats" />
+<a name="stats"></a>
 ### stats (opcional: ps|xb) <Fortnite ID>
 
 Muestra estadisticas generales del usuario de Fortnite&reg;.
