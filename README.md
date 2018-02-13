@@ -97,7 +97,9 @@ Opcional escribe **ps** para usuarios de play station o **xb** para usuarios que
 
 Ejemplo:
 ```
-+uber A.I.R.E.L
++stats A.I.R.E.L
++stats ps A.I.R.E.L
++stats xb A.I.R.E.L
 ```
 
 ## Bot hecho con
@@ -117,5 +119,4 @@ Proyecto bajo licencia MIT. Sientase libre de usarlo como guste.
 ## Agradecimientos
 
 * York Grimes de [anidiotsguide](https://anidiotsguide_old.gitbooks.io/discord-js-bot-guide/content/) por su guia del bot con Discord.js.
-* Alfy por las pruebas.
-* Irken por sus ideas.
+* Alfy, Irken por las pruebas e ideas.
