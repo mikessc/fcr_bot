@@ -22,8 +22,9 @@ Estos son los comandos disponibles:
 - **[.uber](#uber)**
 - **[.stat](#stats)**
 
+
 <a name="help"></a>
-### Help
+### help
 
 Envia por mensaje privado una lista rapida de los comandos disponibles.
 
